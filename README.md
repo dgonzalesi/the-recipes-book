@@ -1,2 +1,24 @@
-# the-recipes-book
-This project is a Full-Stack webpage for storing recipes and the ingredients that you need for it, is build it with Ruby on Rails, HTML, JS, CSS and PostgreSQL.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
