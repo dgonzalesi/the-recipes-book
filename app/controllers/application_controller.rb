@@ -1,3 +1,3 @@
 class ApplicationController < ActionController::Base
-  @current_user = User.first
+  before_action :authenticate_user!
 end
