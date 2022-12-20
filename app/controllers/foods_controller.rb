@@ -23,7 +23,7 @@ class FoodsController < ApplicationController
   def create
 
     @food = Food.new(food_params)
-    # debugger
+    @food[:user_id] = current_user.id
     respond_to do |format|
       if @food.save
         format.html { redirect_to food_url(@food), notice: "Food was successfully created." }
