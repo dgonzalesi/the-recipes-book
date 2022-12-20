@@ -16,7 +16,7 @@ Rails.application.configure do
 
   # Devise config
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-
+  
   # Enable server timing
   config.server_timing = true
 
