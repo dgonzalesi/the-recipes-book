@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Recipes</h1>
+<h1>Recipes of <%= current_user.name %> </h1>
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
