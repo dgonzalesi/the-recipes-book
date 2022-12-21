@@ -26,10 +26,14 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
-    can :manage, :all if user.admin?
-
     return unless user.present? # additional permissions for logged in users
 
-    can :read, :all
+    can :read, Recipe, user_id: user.id
+    can :manage, Recipe, id: user.id
+    can :manage, Food, user_id: user.id
+    can :manage, RecipeFood, user_id: user.id
+    return unless user.role == 'admin'
+
+    can :manage, :all
   end
 end
