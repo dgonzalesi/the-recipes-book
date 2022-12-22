@@ -1,0 +1,28 @@
+#recipes-list {
+    font-family: 'Roboto', sans-serif;
+}
+
+.recipes-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-input-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}

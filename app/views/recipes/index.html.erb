@@ -1,9 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Recipes of <%= current_user.name.capitalize %> </h1>
+<h1 class="recipes-title">Recipes of <%= current_user.name.capitalize %> :</h1>
 
-<div id="recipes">
+<div id="recipes-list">
   <% @recipes.each do |recipe| %>
+    <%= debugger %>
     <%= render recipe %>
     <p>
       <%= link_to "Show this recipe", recipe %>

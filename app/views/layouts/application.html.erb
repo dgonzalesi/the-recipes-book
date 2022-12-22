@@ -25,6 +25,9 @@
     <% if !alert.nil? %>
       <% alert_str = "alert_background" %>
     <% end %>
+    <% if !notice.nil? %>
+      <% alert_str = "notice_background" %>
+    <% end %>
     <div class=<%= alert_str %> >
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>

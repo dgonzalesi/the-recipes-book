@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
-
 .view-login {
     display: flex;
     flex-direction: column;
@@ -17,7 +15,7 @@
 button {
     background-color: #4CAF50;
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -68,13 +66,21 @@ button {
 }
 
 .test {
-    color: #4CAF50;
+    color: #5b4caf;
     border: #ff0000 5px solid;
 }
 
 .alert_background {
     width: 90%;
     background-color: #E5625E;
+    padding: 20px 10px 10px 20px;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.notice_background {
+    width: 90%;
+    background-color: #6A994E;
     padding: 20px 10px 10px 20px;
     border-radius: 10px;
     opacity: 0.7;
