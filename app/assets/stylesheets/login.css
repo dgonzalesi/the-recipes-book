@@ -29,6 +29,7 @@ button {
 
 .login-btn {
     background-color: #4CAF50;
+    width: 50%;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -56,7 +57,6 @@ button {
     font-size: 1.3rem;
     text-decoration: none;
     border: none;
-    color: #ff0000;
 }
 
 #forgot-text {
@@ -70,4 +70,28 @@ button {
 .test {
     color: #4CAF50;
     border: #ff0000 5px solid;
+}
+
+.alert_background {
+    width: 90%;
+    background-color: #E5625E;
+    padding: 20px 10px 10px 20px;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.alert {
+    color: #f2f2f2;
+    opacity: 1;
+    font-weight: bolder;
+    opacity: 1;
+    font-size: 1.3rem;
+}
+
+.notice {
+    color: #f2f2f2;
+    opacity: 1;
+    font-weight: bolder;
+    opacity: 1;
+    font-size: 1.3rem;
 }
