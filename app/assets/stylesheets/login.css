@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+.view-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-login > h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.login-field {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.login-form {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 50%;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border: none;
+    color: #ff0000;
+}
+
+#forgot-text {
+    font-size: 1.3rem;
+    text-decoration: none;
+    border: none;
+    color: #434343;
+    cursor: pointer;
+}
+
+.test {
+    color: #4CAF50;
+    border: #ff0000 5px solid;
+}
