@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+ .nav-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    /* border: red solid 2px; */
+    width: 100%;
+ }
