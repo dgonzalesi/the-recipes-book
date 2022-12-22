@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :recipes
   has_many :foods
-  # validates :name, presence: true
-  # validates :name, presence: true, length: { maximum: 50 }
-  # validates :password, presence: true, length: { maximum: 50 }
+
+  validates :name, presence: true, length: { maximum: 50 }
 end
