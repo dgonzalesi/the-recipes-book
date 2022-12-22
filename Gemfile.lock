@@ -259,7 +259,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rails (~> 7.0.4)
   rspec
-  rspec-rails (>= 3.9.0)
+  rspec-rails (~> 6.0, >= 6.0.1)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
