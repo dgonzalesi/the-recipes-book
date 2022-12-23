@@ -1,8 +1,28 @@
 <div class="recipes-show-container">
-  <h1><%= @recipe.name %></h1>
+  <h1><%= @recipe.name %> <%= @recipe.id %></h1>
 
   <div class="recipe-show-text">
-    <p>Preparation Time: <%= @recipe.preparation_time %> Minutes</p>
+    <div class="recipes-show-toggle">
+      <p>Preparation Time: <%= @recipe.preparation_time %> Minutes</p>
+      <%= form_with(model: @recipe, class:"recipe-form") do |form| %>
+        <% if @recipe.errors.any? %>
+          <div style="color: red">
+            <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+            <ul>
+              <% recipe.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+        <% end %>
+        </div>
+            <div class="form-public">
+              <%= form.label :public, class:"switch" %>
+              <span class="slider"></span>
+              <%= form.check_box :public, id:"form-public-checkbox" %>
+        </div>
+        <% end %>
+    </div>
     <p>Cooking Time: <%= @recipe.cooking_time %> Minutes</p>
     <p>Description: <%= @recipe.description %> </p>
   </div>

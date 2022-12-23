@@ -1,12 +1,21 @@
 <h1>Hi, <%= current_user.name.capitalize %> this is your Foods</h1>
 
 <div id="foods">
-  <% @foods.each do |food| %>
-    <%= render food %>
-    <p>
-      <%= link_to "Show this food", food %>
-    </p>
-  <% end %>
+    <table>
+      <tr>
+        <th>Name:</th>
+        <th>Measurement Unit:</th>
+        <th>Price:</th>
+        <th>Actions: </th>
+      </tr>
+      <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.measurement_unit %></td>
+        <td><%= food.price %></td>
+        <td><%= button_to "Destroy this food", @food, method: :delete %></td>
+      </tr>
+      <% end %>
+    </table>
+</label>
 </div>
-
-<%= link_to "New food", new_food_path %>
