@@ -26,3 +26,18 @@
     align-items: center;
     width: 90%;
 }
+
+.recipes-show-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.recipe-form-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}

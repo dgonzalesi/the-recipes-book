@@ -2,26 +2,26 @@
   <h1><%= @recipe.name %> <%= @recipe.id %></h1>
 <%# TODO Review check box be checked when the recipe is public %>
   <div class="recipe-show-text">
-    <div class="recipes-show-toggle">
+    <div class="recipes-show-toggle test">
       <p>Preparation Time: <%= @recipe.preparation_time %> Minutes</p>
-      <%= form_with(model: @recipe, class:"recipe-form") do |form| %>
+      <%= form_with(model: @recipe, class:"recipe-form-checkbox") do |form| %>
         <% if @recipe.errors.any? %>
           <div style="color: red">
             <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
-
             <ul>
               <% recipe.errors.each do |error| %>
                 <li><%= error.full_message %></li>
               <% end %>
-            </ul>
+              </ul>
+            </div>
         <% end %>
-        </div>
+
             <div class="form-public">
               <%= form.label :public, class:"switch" %>
               <span class="slider"></span>
               <%= form.check_box :public, id:"form-public-checkbox" %>
+            <% end %>
         </div>
-        <% end %>
     </div>
     <p>Cooking Time: <%= @recipe.cooking_time %> Minutes</p>
     <p>Description: <%= @recipe.description %> </p>
