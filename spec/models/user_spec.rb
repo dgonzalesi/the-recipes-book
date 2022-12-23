@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe 'User', type: :model do
   before(:each) do
     @user = User.new(name: 'Jose', email: 'jose@mail.com', password: '1234567')
     @user.save

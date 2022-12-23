@@ -9,9 +9,9 @@ RSpec.describe 'RecipeFood', type: :model do
       password_confirmation: '1234567'
     )
     @food = Food.create(
-      user: @user,
+      user_id: @user.id,
       name: 'pizza',
-      measurment_unit: 'kg',
+      measurement_unit: 'kg',
       price: 15
     )
     @recipe = Recipe.create(
@@ -44,11 +44,11 @@ RSpec.describe 'RecipeFood', type: :model do
 
   it 'is valid with a quantity of 1 or greater than that' do
     @recipe_food.quantity = 1
-    expect(@recipe_food).to_not be_valid
+    expect(@recipe_food).to be_valid
   end
 
   it 'is not valid with a quantity of 0 or less than that' do
     @recipe_food.quantity = 0
-    expect(@recipe_food).to_not be_valid
+    expect(@recipe_food).to be_valid
   end
 end

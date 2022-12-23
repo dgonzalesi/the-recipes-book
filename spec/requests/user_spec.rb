@@ -8,8 +8,8 @@ RSpec.describe 'User', type: :request do
     end
 
     it 'checks if the response body includes correct placeholder text' do
-      get 'http://localhost:3000/useres/sign_up'
-      expect(response.body).to include('Name')
+      get new_user_registration_path
+      expect(response.body).to include('Sign up')
     end
   end
 end
