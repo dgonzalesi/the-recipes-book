@@ -1,37 +1,34 @@
 require 'rails_helper'
 
-RSpec.describe 'Foods', type: :request do
+RSpec.describe 'Rendering foods page', type: :request do
+  describe 'Testing signin page' do
+    before(:each) do
+      visit user_session_path
 
-	before(:each) do
+      @user = User.new(
+        name: 'jose',
+        email: 'jose@mail.com',
+        password: '1234567',
+        password_confirmation: '1234567'
+      )
 
-			visit user_session_path
+      @user.save!
 
-			@user = User.create(
-			name: 'jose',
-			email: 'jose@mail.com',
-			password:'1234567',
-			password_confirmation: '1234567'
-			)
-		end
-			visit foods_path
+      visit foods_path
 
-			@food = Food.create(
-			name: 'pizza',
-			measurment_unit: 'kg',
-			price: '15'
-			)
-		end
+      @food_list = Food.create(user_id: @user.id, name: 'pizza', measurment_unit: 'kg', price: '15')
+    end
 
-		feature 'Testing food index page' do
-			background { visit foods_path }
+    feature 'Testing food index page' do
+      background { visit foods_path }
 
-			scenario 'It should display pizza' do
-				expect(page).to have_content 'pizza'
-			end
+      scenario 'It should display pizza' do
+        expect(page).to have_content('pizza')
+      end
 
-			scenario 'It should display Public' do
-				expect(page).to have_content 'Public'
-			end
-		end
-	end
+      scenario 'It should display Public' do
+        expect(page).to have_content('Public')
+      end
+    end
+  end
 end
