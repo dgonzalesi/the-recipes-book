@@ -1,6 +1,4 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Foods</h1>
+<h1>Hi, <%= current_user.name.capitalize %> this is your Foods</h1>
 
 <div id="foods">
   <% @foods.each do |food| %>

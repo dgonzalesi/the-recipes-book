@@ -1,10 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="recipes-show-container">
+  <h1><%= @recipe.name %></h1>
 
-<%= render @recipe %>
+  <div class="recipe-show-text">
+    <p>Preparation Time: <%= @recipe.preparation_time %> Minutes</p>
+    <p>Cooking Time: <%= @recipe.cooking_time %> Minutes</p>
+    <p>Description: <%= @recipe.description %> </p>
+  </div>
 
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete, form: { data: { "turbo-confirm": 'Are you sure?' } }%>
+  <div class="recipe-show-buttons">
+    <%= button_to "Edit", edit_recipe_path(@recipe), method: :get %>
+    <%= button_to "Back", recipes_path, method: :get %>
+    <%= button_to "Delete", @recipe, method: :delete, form: { data: { "turbo-confirm": 'Are you sure?' } } %>
+  </div>
 </div>
