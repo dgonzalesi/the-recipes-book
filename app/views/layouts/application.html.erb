@@ -15,6 +15,7 @@
   <body>
   <div class="nav-bar">
       <% if user_signed_in? %>
+        <%= button_to 'New Food', new_food_path, method: :get %>
         <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
         <%= button_to 'Edit User Info', edit_user_registration_path, method: :get %>
       <% else %>
@@ -32,6 +33,7 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
     </div>
+    <%# debugger %>
     <%= yield %>
   </body>
 </html>

@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :measurement_unit, style: "display: block" %>
-    <%= form.number_field :measurement_unit %>
+    <%= form.select :measurement_unit, options_for_select([['kgs'], ['ml'], ['g'], ['lbs'], ['cup'], ['spoon'], ['oz'], ['docen'], ['piece(s)']])  %>
   </div>
 
   <div>

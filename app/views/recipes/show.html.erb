@@ -32,4 +32,23 @@
     <%= button_to "Back", recipes_path, method: :get %>
     <%= button_to "Delete", @recipe, method: :delete, form: { data: { "turbo-confirm": 'Are you sure?' } } %>
   </div>
+  <table>
+    <tr>
+        <th>Food:</th>
+        <th>Measurement Unit:</th>
+        <th>Price:</th>
+        <th>Quantity: </th>
+        <th>Actions: </th>
+    </tr>
+    <% @recipe.recipe_foods.each do |food| %>
+    <% current_food = Food.find(food.food_id) %>
+    <tr>
+      <td> <%= current_food.name %> </td>
+      <td> <%= current_food.measurement_unit %> </td>
+      <td> <%= current_food.price %> </td>
+      <td> <%= food.quantity %> </td>
+      <td> ACTIONS PENDING </td>
+    <tr>
+    <% end %>
+  </table>
 </div>
