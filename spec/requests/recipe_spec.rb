@@ -12,18 +12,18 @@ RSpec.describe 'Recipes', type: :request do
       )
     end
 
-    feature 'Testing post index page' do
+    feature 'You need to sign in or sign out' do
       scenario 'shows a list of posts' do
         visit '/recipes'
-        expect(page).to have_content('first')
+        expect(page).to have_content('You need to sign in or sign up before continuing.')
       end
     end
 
     feature 'Testing post index page' do
-      background { visit public_recipes_index_path }
+      background { visit recipes_path }
 
-      scenario 'I can see the title' do
-        expect(page).to have_content('Public')
+      scenario 'I cant see the title' do
+        expect(page).to_not have_content('Recipes')
       end
 
       scenario 'I can see the sign out button' do
