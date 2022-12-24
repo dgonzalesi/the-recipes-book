@@ -32,6 +32,7 @@
     <%= button_to "Back", recipes_path, method: :get %>
     <%= button_to "Delete", @recipe, method: :delete, form: { data: { "turbo-confirm": 'Are you sure?' } } %>
   </div>
+<%= link_to 'add_food', new_recipe_recipe_food_path(@recipe) %>
   <table>
     <tr>
         <th>Food:</th>
@@ -52,3 +53,5 @@
     <% end %>
   </table>
 </div>
+
+
