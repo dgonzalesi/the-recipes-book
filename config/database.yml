@@ -87,4 +87,6 @@ test:
 #
 production:
   <<: *default
+  username: the_recipes_book
+  password: pdO3oCJrHvMvlcz7vOxxfvEPxbBFQFUJ
   url: <%= ENV['DATABASE_URL'] %>
