@@ -1,0 +1,60 @@
+.recipe-form-time {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-forms {
+    width: 70%;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: auto;
+    font-size: 1.3rem;
+    text-decoration: none;
+    border: none;
+}
+
+.form-public {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+}
+
+#form-public-checkbox {
+    padding-right: 5px;
+}
+
+#recipe-description {
+    height: 30vh;
+}
+
+.recipe-input-div > label {
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0px 10px 5px;
+}
+
+#recipes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.recipe-list-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.recipe-list-element-rigth {
+    width: 60%;
+    padding-left: 5%;
+    color: #323232;
+}
+
+.recipe-list-element-left {
+    width: 40%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

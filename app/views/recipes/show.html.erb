@@ -1,10 +1,57 @@
-<p style="color: green"><%= notice %></p>
+<div class="recipes-show-container">
+  <h1><%= @recipe.name %> <%= @recipe.id %></h1>
+<%# TODO Review check box be checked when the recipe is public %>
+  <div class="recipe-show-text">
+    <div class="recipes-show-toggle test">
+      <p>Preparation Time: <%= @recipe.preparation_time %> Minutes</p>
+      <%= form_with(model: @recipe, class:"recipe-form-checkbox") do |form| %>
+        <% if @recipe.errors.any? %>
+          <div style="color: red">
+            <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+            <ul>
+              <% recipe.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+              </ul>
+            </div>
+        <% end %>
 
-<%= render @recipe %>
+            <div class="form-public">
+              <%= form.label :public, class:"switch" %>
+              <span class="slider"></span>
+              <%= form.check_box :public, id:"form-public-checkbox" %>
+            <% end %>
+        </div>
+    </div>
+    <p>Cooking Time: <%= @recipe.cooking_time %> Minutes</p>
+    <p>Description: <%= @recipe.description %> </p>
+  </div>
 
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+  <div class="recipe-show-buttons">
+    <%= button_to "Edit", edit_recipe_path(@recipe), method: :get %>
+    <%= button_to "Back", recipes_path, method: :get %>
+    <%= button_to "Delete", @recipe, method: :delete, form: { data: { "turbo-confirm": 'Are you sure?' } } %>
+  </div>
+  <table>
+    <tr>
+        <th>Food:</th>
+        <th>Measurement Unit:</th>
+        <th>Price:</th>
+        <th>Quantity: </th>
+        <th>Actions: </th>
+    </tr>
+    <% @recipe.recipe_foods.each do |food| %>
+    <% current_food = Food.find(food.food_id) %>
+    <tr>
+      <td> <%= current_food.name %> </td>
+      <td> <%= current_food.measurement_unit %> </td>
+      <td> <%= current_food.price %> </td>
+      <td> <%= food.quantity %> </td>
+      <td>
+      ACTIONS
+        <%= button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), method: :delete %>
+      </td>
+    <tr>
+    <% end %>
+  </table>
 </div>

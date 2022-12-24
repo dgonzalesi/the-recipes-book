@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap');
+
+ .nav-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    /* border: red solid 2px; */
+    width: 100%;
+ }

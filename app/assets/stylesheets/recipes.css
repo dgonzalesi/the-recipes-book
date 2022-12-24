@@ -1,0 +1,43 @@
+#recipes-list {
+    font-family: 'Roboto', sans-serif;
+}
+
+.recipes-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#recipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-input-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+
+.recipes-show-toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.recipe-form-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}

@@ -1,0 +1,10 @@
+.recipe-show-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.recipes-show-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

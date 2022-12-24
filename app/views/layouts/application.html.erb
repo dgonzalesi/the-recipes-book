@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TheRecipesBook</title>
+    <title>The Recipes Book</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,15 +13,26 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="nav-bar">
+  <div class="nav-bar">
       <% if user_signed_in? %>
+        <%= button_to 'New Food', new_food_path, method: :get %>
+        <%= button_to 'Recipes', recipes_path, method: :get %>
         <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
-        <%= button_to 'Edit Info', edit_user_registration_path, method: :get %>
+        <%= button_to 'Edit User Info', edit_user_registration_path, method: :get %>
       <% else %>
         <%= button_to 'Sign Up', new_user_session_path, method: :get %>
       <% end %>
+    </div>
+    <% alert_str = "" %>
+    <% if !alert.nil? %>
+      <% alert_str = "alert_background" %>
+    <% end %>
+    <% if !notice.nil? %>
+      <% alert_str = "notice_background" %>
+    <% end %>
+    <div class=<%= alert_str %> >
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
     </div>
     <%= yield %>
   </body>
