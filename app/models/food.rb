@@ -3,5 +3,4 @@ class Food < ApplicationRecord
   has_many :recipe_foods
 
   validates :name, presence: true, length: { maximum: 50 }
-
 end
