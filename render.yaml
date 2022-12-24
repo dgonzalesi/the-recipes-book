@@ -1,7 +1,7 @@
 databases:
   - name: The-Recipes-Book
     databaseName: the_recipes_book_development
-    user:postgres
+    user: postgres
 
 services:
   - type: web
