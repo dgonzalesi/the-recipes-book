@@ -1,4 +1,5 @@
-<%= form_with(model: recipe, class:"recipe-form") do |form| %>
+<%= form_with(model: @recipe, class:"recipe-form") do |form| %>
+
   <% if recipe.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
@@ -10,22 +11,23 @@
       </ul>
     </div>
   <% end %>
+<%#  = === == = === = = == = ==  == = = %>
 
   <div class="recipe-input-div">
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name, class:"input-forms" %>
   </div>
-
+<%#  == = == = = = = = = == == = = = = = = = %>
   <div class="recipe-input-div">
     <%= form.label :preparation_time %>
       <%= form.number_field :preparation_time, class:"input-forms", placeholder:"in minutes" %>
   </div>
-
+<%#  = = = = = = = = = = = = = = == = =  = %>
   <div class="recipe-input-div">
     <%= form.label :cooking_time, style: "display: block" %>
     <%= form.number_field :cooking_time, class:"input-forms", placeholder:"in minutes" %>
   </div>
-
+<%# === = = == == = = = = ==== = %>
   <div class="recipe-input-div">
     <%= form.label :description, style: "display: block" %>
     <%= form.text_area :description, class: "input-forms",id:"recipe-description" %>
