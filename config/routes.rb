@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  get 'recipe_foods/new'
+  get 'recipe_foods/create'
+  get 'recipe_foods/destroy'
+  get 'recipe_foods/update'
 
   devise_for :users, :controllers => { registrations: 'users/registrations' }
   resources :foods
-  resources :recipes
+  resources :recipes do
+    resources :recipe_foods
+  end
   resources :users, only: [:show]
   root "recipes#index"
 

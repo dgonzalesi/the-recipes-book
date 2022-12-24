@@ -61,6 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_23_210454) do
 
   add_foreign_key "foods", "users"
   add_foreign_key "recipe_foods", "foods"
-  add_foreign_key "recipe_foods", "recipes", on_delete: :cascade
+  add_foreign_key "recipe_foods", "recipes"
   add_foreign_key "recipes", "users"
 end
