@@ -48,7 +48,10 @@
       <td> <%= current_food.measurement_unit %> </td>
       <td> <%= current_food.price %> </td>
       <td> <%= food.quantity %> </td>
-      <td> ACTIONS PENDING </td>
+      <td>
+      ACTIONS
+        <%= button_to "Delete", recipe_recipe_food_path(recipe_id: @recipe.id, id: food.id), method: :delete %>
+      </td>
     <tr>
     <% end %>
   </table>

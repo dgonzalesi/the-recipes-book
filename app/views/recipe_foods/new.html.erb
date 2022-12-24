@@ -1,6 +1,6 @@
-<h2 class="subpage-title">Edit the recipe food little chef...</h2>
+<h2 class="subpage-title">Edit the Recipe Food</h2>
 <div>
-<%= form_with  model: @recipe_food, url: { action: "update"}, local: true, class:"input-form"  do |f|%>
+<%= form_with  (model: recipe_food), url: { action: "update"}, local: true, class:"input-form"  do |f|%>
     <div class="form-div" >
         <div class="update-rfood-input">
         <%= f.label :food, class:"form-label" %><br>
@@ -21,3 +21,4 @@
   </div>
 </div>
 </div>
+
