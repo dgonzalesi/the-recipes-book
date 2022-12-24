@@ -2,11 +2,13 @@ AllCops:
   NewCops: enable
   Exclude:
     - "db/**/*"
-    - "bin/*" 
+    - "bin/*"
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
     - "node_modules/**/*"
+    # This ignores the controller of divise that need a specific syntax for permit the add name and edit.
+    - "app/controllers/users/registrations_controller.rb"
 
   DisplayCopNames: true
 
