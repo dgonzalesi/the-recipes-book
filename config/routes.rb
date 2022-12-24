@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'users/registrations' }
   resources :foods
   resources :recipes do
-    resources :recipe_foods
+    resources :recipe_foods, only: %i[new create destroy update edit]
   end
   resources :users, only: [:show]
   root "recipes#index"
