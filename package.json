@@ -1,0 +1,26 @@
+{
+  "name": "the-recipes-book",
+  "version": "1.0.0",
+  "description": "An app for save recipes",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/dgonzalesi/the-recipes-book.git",
+  "keywords": [
+    "recipes",
+    "ror",
+    "rails",
+    "js"
+  ],
+  "author": "Daniel G. Sierra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgonzalesi/the-recipes-book/issues"
+  },
+  "homepage": "https://github.com/dgonzalesi/the-recipes-book#readme"
+}
