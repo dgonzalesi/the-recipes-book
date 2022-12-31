@@ -10,6 +10,7 @@
   </head>
 
   <body>
+  <%# !TODO Refactor Navbar to a fragment %>
   <div class="nav-bar">
       <% if user_signed_in? %>
         <%= button_to 'New Food', new_food_path, method: :get %>
