@@ -22,3 +22,7 @@
     /* border: red solid 2px; */
     width: 100%;
  }
+
+ #nav-close {
+   background-color: #fff;
+ }
