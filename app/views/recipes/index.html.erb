@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 class="recipes-title">Recipes of <%= current_user.name.capitalize %> :</h1>
+<h1 class="recipes-title">Recipes of <%= current_user.name.titleize %> :</h1>
 
 <div id="recipes-list">
   <% current_user.recipes.each do |recipe| %>

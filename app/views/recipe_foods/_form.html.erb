@@ -1,0 +1,23 @@
+<h1>Create a New Ingredient for <%= @current_recipe.name %></h1>
+<%= form_with scope: :recipe_food, url: recipe_recipe_foods_path, class:"recipe-form", local: false do |form| %>
+
+    <div class="recipe-input-div">
+        <%= form.label :recipe_id %>
+        <%= form.hidden_field :recipe_id, class:"input-forms", value:@current_recipe.id  %>
+    </div>
+
+    <div class="custom-select test">
+        <p class="test" > What do you need? </p>
+        <%= collection_select(:recipe_food, :food_id, @foods_list, :id, :name, prompt: true, class:"recipe-food-dropdown") %>
+    </div>
+
+    <div class="recipe-input-div">
+        <%= form.label :quantity %>
+        <%= form.number_field :quantity, class:"input-forms", placeholder:"How many do you need?", min: 1 %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>
+

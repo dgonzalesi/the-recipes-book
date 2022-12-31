@@ -1,4 +1,4 @@
-<h1>Hi, <%= current_user.name.capitalize %> this is the Foods avalible</h1>
+<h1>Hi, <%= current_user.name.titleize %> this is the Foods avalible</h1>
 
 <div id="foods">
     <table>
@@ -13,7 +13,7 @@
         <td><%= food.name %></td>
         <td><%= food.measurement_unit %></td>
         <td><%= food.price %></td>
-        <td><%= button_to "Delete", @food, method: :delete %></td>
+        <td><%= button_to "Delete", food, method: :delete %></td>
       </tr>
       <% end %>
     </table>
