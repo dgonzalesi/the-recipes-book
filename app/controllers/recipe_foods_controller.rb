@@ -5,7 +5,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_foods = RecipeFood.all
   end
 
-  def new;
+  def new
     @recipe_food = RecipeFood.new
   end
 
@@ -17,6 +17,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = RecipeFood.create(recipe_food_params)
     redirect_to recipe_path(recipe_food_params[:recipe_id])
   end
+
   def destroy
     @recipe_food = RecipeFood.find(params[:id])
     @recipe_food.destroy
@@ -37,5 +38,4 @@ class RecipeFoodsController < ApplicationController
   def recipe_food_params
     params.require(:recipe_food).permit(:quantity, :recipe_id, :food_id)
   end
-
 end
