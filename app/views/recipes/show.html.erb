@@ -31,6 +31,7 @@
     <%= button_to "Edit", edit_recipe_path(@recipe), method: :get %>
     <%= button_to "Back", recipes_path, method: :get %>
     <%= button_to "Delete", @recipe, method: :delete, form: { data: { "turbo-confirm": 'Are you sure?' } } %>
+    <%= button_to "New Ingredient", new_recipe_recipe_food_path(params[:id]), method: :get %>
   </div>
   <table>
     <tr>

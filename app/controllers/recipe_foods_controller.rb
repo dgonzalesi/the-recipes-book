@@ -15,7 +15,7 @@ class RecipeFoodsController < ApplicationController
     @recipes_list = Recipe.all
     @foods_list = Food.all
     @recipe_food = RecipeFood.create(recipe_food_params)
-    debugger
+    redirect_to recipe_path(recipe_food_params[:recipe_id])
   end
   def destroy
     @recipe_food = RecipeFood.find(params[:id])
