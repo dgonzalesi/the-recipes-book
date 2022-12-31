@@ -6,8 +6,8 @@
         <%= form.hidden_field :recipe_id, class:"input-forms", value:@current_recipe.id  %>
     </div>
 
-    <div class="custom-select test">
-        <p class="test" > What do you need? </p>
+    <div class="custom-select">
+        <p class="" > What do you need? </p>
         <%= collection_select(:recipe_food, :food_id, @foods_list, :id, :name, prompt: true, class:"recipe-food-dropdown") %>
     </div>
 

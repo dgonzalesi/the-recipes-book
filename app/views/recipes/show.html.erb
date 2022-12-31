@@ -2,7 +2,7 @@
   <h1><%= @recipe.name %> <%= @recipe.id %></h1>
 <%# TODO Review check box be checked when the recipe is public %>
   <div class="recipe-show-text">
-    <div class="recipes-show-toggle test">
+    <div class="recipes-show-toggle">
       <p>Preparation Time: <%= @recipe.preparation_time %> Minutes</p>
       <%= form_with(model: @recipe, class:"recipe-form-checkbox") do |form| %>
         <% if @recipe.errors.any? %>
