@@ -3,3 +3,7 @@
     background-color: blueviolet;
     filter: blur(50%);
 }
+
+.my_display {
+    border: red solid 5px;
+}
