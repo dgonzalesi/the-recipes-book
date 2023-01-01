@@ -2,7 +2,8 @@ import { Controller } from '@hotwired/stimulus'
 
 export default class extends Controller {
   connect () {
-    console.log(' Hellow Stimulus', this.element)
+    const width = window.innerWidth
+    console.log(' Hellow Stimulus', this.element, width)
   }
 
   open () {
