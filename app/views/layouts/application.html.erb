@@ -11,7 +11,9 @@
 
   <body>
   <%# !TODO Refactor Navbar to a fragment %>
-  <button id="nav-close"><%= image_tag 'icons/menu.svg', width: 25, height: 25 %></button>
+  <div data-controller="menu" >
+    <button id="nav-close" data-action="click->menu#open"><%= image_tag 'icons/menu.svg', width: 25, height: 25 %></button>
+  </div>
   <div class="nav-bar">
       <% if user_signed_in? %>
         <%= button_to 'New Food', new_food_path, method: :get %>
