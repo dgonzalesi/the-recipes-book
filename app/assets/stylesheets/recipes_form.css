@@ -43,6 +43,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    padding: 15px;
+
 }
 
 .recipe-list-element-rigth {
@@ -57,4 +61,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.recipe-list-element-left a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #323232;
+    font-weight: 700;
+    font-size: 1.2rem;
 }

@@ -5,11 +5,11 @@
 <div id="recipes-list">
   <% current_user.recipes.each do |recipe| %>
     <div class="recipe-list-element">
-      <div class="recipe-list-element-left test">
+      <div class="recipe-list-element-left">
         <%= link_to recipe.name, recipe %>
         <%= button_to "Delete", recipe_path(recipe.id) , method: :delete %>
       </div>
-      <div class="recipe-list-element-rigth test">
+      <div class="recipe-list-element-rigth">
         <%= recipe.description %>
       </div>
     </div>

@@ -1,0 +1,9 @@
+.food-show-buttons {
+    border: rgb(0, 8, 255) solid 2px;
+    background-color: blueviolet;
+    filter: blur(50%);
+}
+
+.my_display {
+    border: red solid 5px;
+}

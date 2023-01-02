@@ -10,15 +10,22 @@
   </head>
 
   <body>
-  <div class="nav-bar">
-      <% if user_signed_in? %>
-        <%= button_to 'New Food', new_food_path, method: :get %>
-        <%= button_to 'Recipes', recipes_path, method: :get %>
-        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
-        <%= button_to 'Edit User Info', edit_user_registration_path, method: :get %>
-      <% else %>
-        <%= button_to 'Sign Up', new_user_session_path, method: :get %>
-      <% end %>
+  <%# !TODO Refactor Navbar to a fragment %>
+  <div class="navbar-desktop" data-controller="menu" >
+    <button class="nav-button" data-action="click->menu#open" data-menu-target="menuOpen"><%= image_tag 'icons/menu.svg', width: 25, height: 25 %></button>
+
+    <button class="nav-button" id="nav-close" data-action="click->menu#close" data-menu-target="menuClose"><%= image_tag 'icons/close.svg', width: 25, height: 25 %></button>
+
+    <div class="navbar-buttons" data-menu-target="buttons">
+        <% if user_signed_in? %>
+          <%= button_to 'New Food', new_food_path, method: :get %>
+          <%= button_to 'Recipes', recipes_path, method: :get %>
+          <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
+          <%= button_to 'Edit User Info', edit_user_registration_path, method: :get %>
+        <% else %>
+          <%= button_to 'Sign Up', new_user_session_path, method: :get %>
+        <% end %>
+      </div>
     </div>
     <% alert_str = "" %>
     <% if !alert.nil? %>
