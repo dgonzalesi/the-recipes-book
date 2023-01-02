@@ -6,7 +6,7 @@
 #
 # The application 'bundle' is installed as part of a gem, and
 # this file is here to facilitate running it.
-#
+# This project was coded by: dgonzalesi & andym80 and is part of the Microverse curriculum cohor12 (2021).
 
 require "rubygems"
 
