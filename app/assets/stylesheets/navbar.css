@@ -25,9 +25,10 @@
  .navbar-desktop {
     display: flex;
     flex-direction: row-reverse;
-    height: 5vh;
+    height: 50px;
     background-color: #fff;
-    width: 100vw;
-    margin: 2%;
+    width: 95%;
+    padding: 1% 4% 15px 4%;
+    margin: 0;
     box-shadow: grey 5px;
  }
