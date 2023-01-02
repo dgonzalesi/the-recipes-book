@@ -11,10 +11,12 @@
 
   <body>
   <%# !TODO Refactor Navbar to a fragment %>
-  <div data-controller="menu" >
-    <button id="nav-close" data-action="click->menu#open" data-menu-target="menuOpen"><%= image_tag 'icons/menu.svg', width: 25, height: 25 %></button>
+  <div class="navbar-desktop" data-controller="menu" >
+    <button class="nav-button" data-action="click->menu#open" data-menu-target="menuOpen"><%= image_tag 'icons/menu.svg', width: 25, height: 25 %></button>
 
-    <div class="nav-bar my_display" data-menu-target="buttons">
+    <button class="nav-button" id="nav-close" data-action="click->menu#close" data-menu-target="menuClose"><%= image_tag 'icons/close.svg', width: 25, height: 25 %></button>
+
+    <div class="navbar-buttons" data-menu-target="buttons">
         <% if user_signed_in? %>
           <%= button_to 'New Food', new_food_path, method: :get %>
           <%= button_to 'Recipes', recipes_path, method: :get %>

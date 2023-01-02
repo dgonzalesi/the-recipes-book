@@ -1,10 +1,28 @@
-.nav-bar {
+.navbar-buttons {
     display: flex;
-    flex-direction: row-reverse;
     /* border: red solid 2px; */
+    flex-direction: row-reverse;
     width: 100%;
  }
 
 #nav-close {
    background-color: #fff;
+ }
+
+ #nav-close {
+    display: none;
+    transition: display 1s;
+    background-color: rgb(230, 230, 230);
+    border-radius: 4px;
+    position: absolute;
+ }
+
+ .nav-button {
+    background-color: rgb(230, 230, 230);
+    border-radius: 4px;
+ }
+
+ .navbar-desktop {
+    display: flex;
+    flex-direction: row-reverse;
  }
