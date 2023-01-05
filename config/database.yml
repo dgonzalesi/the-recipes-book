@@ -17,7 +17,7 @@
 default: &default
   adapter: postgresql
   username: the_recipes_book
-  password: pdO3oCJrHvMvlcz7vOxxfvEPxbBFQFUJ
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -64,6 +64,7 @@ development:
 test:
   <<: *default
   database: the_recipes_book_test
+  url: <%= ENV["LOCAL_DATABASE_URL"] %>
   username: postgres
   password: <%= ENV["DEFAULT_PW_DB"] %>
 
